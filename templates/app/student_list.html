@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+</head>
+<body>
+        <h1> Students </h1>
+
+        <div>
+
+            <table border="2" >
+                <thead>
+                    <th> Photo </th>
+                    <th> Name </th>
+                    <th> Standard </th>
+                    <th> Physics </th>
+                    <th> Chemistry </th>
+                    <th> Biology </th>
+                    
+                </thead>
+                {% for student in object_list %}
+                <tr>                    
+                    <td> <img src="{{student.id_photo}}" alt="" srcset=""/> </td>
+                    <td> {{student.name}} </td>
+                    <td> {{student.std}} </td>
+                    <td> {{student.physics}} </td>
+                    <td> {{student.chemistry}} </td>
+                    <td> {{student.biology}} </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+        </div>
+
+</body>
+</html>
